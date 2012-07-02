@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatability = 1.6
+version = '1.0-SNAPSHOT'
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  compile files('lib/giraph-0.2-SNAPSHOT.jar')
+  compile 'com.yammer.metrics:metrics-graphite:2.1.2'
+  compile 'com.yammer.metrics:metrics-core:2.1.2'
+  compile 'org.apache.hadoop:hadoop-core:1.0.2'
+  compile 'log4j:log4j:1.2.16'
+  testCompile 'junit:junit:4.10'
+}
+
